@@ -1,0 +1,119 @@
+﻿@model IEnumerable<RefRegister.Models.Domarlista>
+@{
+    ViewData["Title"] = "SearchView";
+}
+
+<h1>SearchView</h1>
+<form asp-controller="Domarlista" asp-action="SearchView">
+    <div>
+        <label for="search" class="">Fritext: </label>
+        <input id="search" class="" type="text" name="SearchString">
+        <button type="submit" class="btn btn-primary">
+            <i class="fas fa-search"></i> Sök
+        </button>
+    </div>
+</form>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RefNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RefType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Category)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CategoryType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Distrikt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Club)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StreetAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Zipcode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.County)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Phone1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Phone2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FirstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LastName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RefNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RefType)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Category)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CategoryType)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Distrikt)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Club)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StreetAddress)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Zipcode)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.County)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Phone1)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Phone2)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>             
+                <td>                    
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+

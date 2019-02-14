@@ -1,0 +1,100 @@
+﻿@model RefRegister.Models.Game
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Game</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="MatchNumber" class="control-label"></label>
+                <input asp-for="MatchNumber" class="form-control" />
+                <span asp-validation-for="MatchNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GameDate" class="control-label"></label>
+                <input asp-for="GameDate" class="form-control" />
+                <span asp-validation-for="GameDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Arena" class="control-label"></label>
+                <input asp-for="Arena" class="form-control" />
+                <span asp-validation-for="Arena" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Team1" class="control-label"></label>
+                <input asp-for="Team1" class="form-control" />
+                <span asp-validation-for="Team1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Team2" class="control-label"></label>
+                <input asp-for="Team2" class="form-control" />
+                <span asp-validation-for="Team2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Score1" class="control-label"></label>
+                <input asp-for="Score1" class="form-control" />
+                <span asp-validation-for="Score1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Score2" class="control-label"></label>
+                <input asp-for="Score2" class="form-control" />
+                <span asp-validation-for="Score2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ref1" class="control-label"></label>
+                <input asp-for="Ref1" class="form-control" />
+                <span asp-validation-for="Ref1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ref2" class="control-label"></label>
+                <input asp-for="Ref2" class="form-control" />
+                <span asp-validation-for="Ref2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ref3" class="control-label"></label>
+                <input asp-for="Ref3" class="form-control" />
+                <span asp-validation-for="Ref3" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ref4" class="control-label"></label>
+                <input asp-for="Ref4" class="form-control" />
+                <span asp-validation-for="Ref4" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Fee1" class="control-label"></label>
+                <input asp-for="Fee1" class="form-control" />
+                <span asp-validation-for="Fee1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Fee2" class="control-label"></label>
+                <input asp-for="Fee2" class="form-control" />
+                <span asp-validation-for="Fee2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Fee3" class="control-label"></label>
+                <input asp-for="Fee3" class="form-control" />
+                <span asp-validation-for="Fee3" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Fee4" class="control-label"></label>
+                <input asp-for="Fee4" class="form-control" />
+                <span asp-validation-for="Fee4" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
