@@ -20,5 +20,15 @@ namespace RefRegister.Models
 
         public DbSet<RefRegister.Models.Game> Game { get; set; }
 
+        public DbSet<RefRegister.Models.Arena> Arena { get; set; }
+
+        public DbSet<RefRegister.Models.Person> Person { get; set; }
+
+        public DbSet<RefRegister.Models.Fee> Fee { get; set; }
+
+        public DbSet<RefRegister.Models.Team> Team { get; set; }
+
+        public DbSet<RefRegister.Models.Match> Match { get; set; }
+
     }
 }
